@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+nameSuffix: '5'
+
+commonLabels:
+    app: backend5
+    app.kubernetes.io/component: backend5
+    app.kubernetes.io/instance: backend5
+    app.kubernetes.io/name: backend5
+    app.kubernetes.io/part-of: api-workshop
+    app.openshift.io/runtime: nodejs
