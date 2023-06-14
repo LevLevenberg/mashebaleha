@@ -12,7 +12,7 @@ configMapGenerator:
     - PORT=8080
     - HOST1=backend1
     - HOST2=backend2
-    - API_URL="Hello Red Hat!!!"
+    - API_URL="Hello Red Lev!!!"
 - name: app-config
   files:
     - frontend/conf/entrypoint.sh
