@@ -58,9 +58,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
           terminationMessagePolicy: File
-         # Update with your image name
-         image: 'quay.io/levlevenberg/backend-app:v1'
-         #
+          image: 'quay.io/levlevenberg/backend-app:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
