@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/LevLevenberg/mashebaleha
       revision: main
       directories:
-      - path: Deployment/Backend/layers/*
+      - path: Deployment/backend/layers/*
  template:
     metadata:
       name: 'backend-{{path.basename}}'
