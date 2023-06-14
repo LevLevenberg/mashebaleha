@@ -42,7 +42,7 @@ spec:
             successThreshold: 1
             failureThreshold: 3
           terminationMessagePath: /dev/termination-log
-        - name: fronetend
+          name: fronetend
           volumeMounts:
             - name: app-config
               mountPath: '/usr/share/nginx/html/config'
