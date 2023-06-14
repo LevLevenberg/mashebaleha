@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+ name: backends-app
+namespace: user5-argocd
+spec:
+ generators:
+  - git:
+      repoURL: https://github.com/LevLevenberg/mashebaleha
+      revision: main
+      directories:
+      - path: Deployment/Backend/layers/*
+ template:
+    metadata:
+      name: 'backend-{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/LevLevenberg/mashebaleha
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: user5-application
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
